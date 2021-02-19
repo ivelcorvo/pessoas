@@ -1,0 +1,26 @@
+/*
+margin: direita, esquerda;
+margin: superior, direita e esquerda, inferior;
+margin: superior, direita, inferior  esquerda;
+*/
+
+body{
+	background-color: black ;
+}
+
+h1{
+	font-family: Arial;
+	text-align: center;
+}
+
+/*========================================*/
+.header, .conteiner{
+	margin: auto;
+	width: 45%;
+	border: solid;
+	border-radius: 30px;
+	background-color: white;
+	padding: 20px;
+}
+
+
