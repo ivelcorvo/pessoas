@@ -1,39 +1,18 @@
 <?php
-	$pessoas = [];
-
-	function adicionarPessoa(&$p, $nome, $idade, $cidade){
-		$p[] = ['nome'=>$nome, 'idade'=>$idade, 'cidade'=>$cidade];
-	}
-
-	function imprimir($p){
-		$i = count($p);
-		for ($e = 0; $e <= $i-1; $e++){
-			var_dump($p[$e]);
-			echo'<hr>';
-		}		
-	}
-
-	function getQuantidade($p){
-		return count($p);
-	}
-
-	function remover(&$p,$nome){
-		$i = array_search($nome, array_column($p,'nome')); // array_column seleciona uma coluna de um array associativo
-		if(is_integer($i)){
-			array_splice($p, $i, 1); // revome do array / apartir do indice / quantidade que será removida	
-		}else
-			echo'Nome não encontrado';
-	}
-
+	require_once("funcoes.php");
 ?>
-
 
 <!DOCTYPE html>
 <html lang = 'pt-br'>
 	<head>
-		<title>php</title>
-		<link rel='stylesheet' href='_css/estilo.css'>
 		<meta charset="utf-8">
+		<meta name='author' content='Levi Alves'>
+		<meta name='description' content='aprendendo php'>
+		<meta name='robots' content='index, nofollow'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<meta http-equiv='X-UA-Compatible' name='ie=edige'>		
+		<title>php</title>
+		<link rel='stylesheet' type='text/css' href='_css/estilo.css'>		
 	</head>
 	<body>
 		<div class='header'>
@@ -41,7 +20,7 @@
 		</div>
 
 		<div class='conteiner'>
-			<div class='principal'>
+			<section class='principal'>
 				
 				<?php
 
@@ -62,9 +41,9 @@
 					imprimir($pessoas);
 				?>
 	
-			</div>
+			</section>
 		</div>
-		<div class='footer'>			
-		</div>	
+		<footer>			
+		</footer>			
 	</body>
 </html>
